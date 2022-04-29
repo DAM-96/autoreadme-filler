@@ -27,8 +27,13 @@ const questions = [
         message: 'How is the app/project installed?',
       },
       {
-        type: 'input',
+        type: 'editor',
         name: 'usage',
+        message: 'How is the app/project used? ',
+      },
+      {
+        type: 'input',
+        name: 'tests',
         message: 'Project test samples: ',
       },
       {
@@ -55,8 +60,8 @@ const questions = [
       {
         type: 'input',
         name: 'fileName',
-        message: 'Name of the README file [Default - README]: ',
-        default: "README"
+        message: 'Name of the README file: ',
+        default: "generatedREADME"
       },
 ];
 

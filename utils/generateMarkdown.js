@@ -243,7 +243,7 @@ function requiresCopyright(license){
   for(let i = 0; i < licenses.length; i++) {
     if(license == licenses[i].name) {
       if(licenses[i].requiresCopyright) {
-        return `Copyright (C) ${copyRight.year} ${copyRight.name}`;
+        return `*Copyright (C) ${copyRight.year} ${copyRight.name}*`;
       } else {
         return ""
       };
@@ -256,11 +256,15 @@ function requiresCopyright(license){
 function renderLicenseSection(license) {
   if (licensesNamesList.indexOf(license) == -1 || license == "" || license == null) return "";
   licenseSec = `
+  *License Start*
+  
   ${requiresCopyright(license)}
   
   ${renderLicenseBadge(license)}
 
-  Link: ${renderLicenseLink(license)}
+  **Link:** ${renderLicenseLink(license)}
+
+  *License End*
   `;
   return licenseSec;
 }
@@ -275,7 +279,7 @@ function generateMarkdown(data) {
 
   ## Description
   ${data.description}
-
+\n
   ## Table of contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -286,22 +290,22 @@ function generateMarkdown(data) {
   
   ## Installation
   ${data.installation}
-
+\n
   ## Usage
   ${data.usage}
-
+\n
   ## Tests
   ${data.tests}
-
+\n
   ## Contributing
   ${data.contributing}
-
+\n
   ## License
   ${licenseSec}
-
+\n
   ## Questions
-  For any questions you can contact us through... \n
-  **GitHub:** ${data.gitHubUser} \n
+  For any questions you can contact us through any of the following \n
+  **GitHub:** https://github.com/${data.gitHubUser} \n
   **Email:** ${data.email} \n
 
 `;
