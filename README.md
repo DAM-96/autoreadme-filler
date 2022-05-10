@@ -16,13 +16,15 @@
   ## Installation
 - Clone the GitHub repo into your local computer
 - Open the terminal on the repo's folder
-- Run `npm i` to install the application's node modules
+- Run `npm i` to install the application's node modules (REQUIRES NODE JS)
 - Run the application with `node index`
 - A readme file will be created or overwritten with the name input inthe app
 
 
 ## Usage
- Run `node index` in a terminal on the 
+ Run `npm start` in a terminal on the base folder of the repo.
+ 
+ [Watch the video]
 
 ## Image
 ![Usage sample](./assets/images/Captura.PNG)
@@ -55,3 +57,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   **Email:** d.a.morenog@outlook.com 
 
 
+[Watch the video]: https://streamable.com/6z3on4
